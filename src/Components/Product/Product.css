@@ -1,0 +1,115 @@
+.product {
+  width: 100%;
+  background-color: #fffaf0;
+  padding: 1rem 0;
+}
+.product h1 {
+  padding: 2rem 3rem;
+  padding-top: 5rem;
+  color: #59432d;
+  font-size: 3.4rem;
+}
+
+.productCards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  margin: 2rem 0;
+  padding: 0 3rem;
+}
+.productCards .productCard {
+  box-shadow: 6px 6px 6px 6px #ccbba3;
+  border-radius: 20px;
+}
+.productCards .productCard .productImg {
+  height: 20rem;
+  background-color: #f3e6d2;
+  border-radius: 20px;
+}
+.productCards .productCard .productImg img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1/1;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.productCards .productCard h2 {
+  font-size: 1.8rem;
+  color: #59432d;
+  font-weight: 600;
+  padding: 1rem;
+}
+.productCards .productCard p {
+  font-size: 1rem;
+  color: #8c663f;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  padding: 0 1rem;
+}
+.productCards .productCard .price {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1rem;
+}
+.productCards .productCard .price .total {
+  color: #8c663f;
+  font-weight: 500;
+}
+.productCards .productCard .price h4 {
+  font-size: 1.2rem;
+  padding: 1rem 0;
+}
+.productCards .productCard .price h4 .discount {
+  color: #ff8100;
+  letter-spacing: -1px;
+}
+.productCards .productCard .price h4 .mrp {
+  color: #ccbba3;
+  text-decoration: line-through;
+  padding: 0 0.5rem;
+}
+.productCards .productCard .price h4 .discountPrice {
+  color: #59432d;
+  font-weight: 700;
+}
+.productCards .productCard .add {
+  border: none;
+  display: block;
+  background-color: #ff8100;
+  color: #fffaf0;
+  padding: 1rem 4rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 30px;
+  margin: 1.5rem auto;
+  border: 1px solid #ff8100;
+  cursor: pointer;
+}
+.productCards .productCard .add:active {
+  scale: 0.95;
+}
+.productCards .productCard .add:hover {
+  background-color: #fffaf0;
+  color: #ff8100;
+}
+
+/* Tablets (iPads etc.) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .productCards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 767px) {
+  .product h1 {
+    font-size: 2.4rem;
+    padding: 0rem 1rem;
+    padding-top: 2rem;
+  }
+  .productCards {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 0 1rem;
+  }
+}/*# sourceMappingURL=Product.css.map */

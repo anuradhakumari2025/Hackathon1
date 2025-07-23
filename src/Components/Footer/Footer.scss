@@ -1,0 +1,143 @@
+$white: #fffaf0;
+$brown: #59432d;
+$grey: #ccbba3;
+$lightBrown: #8c663f;
+
+.footer {
+  background-color: $white;
+  width: 100%;
+  .svg {
+    height: 300px;
+  }
+  .main {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 2rem 3rem;
+    padding-top: 0;
+    .left {
+      width: 45%;
+      p {
+        text-transform: uppercase;
+        font-weight: 500;
+        color: $brown;
+      }
+
+      .email {
+        border-bottom: 1px solid $brown;
+        width: 75%;
+        margin: 1rem 0;
+        padding: 0.5rem 0;
+        input {
+          border: none;
+          background-color: $white;
+          font-size: 2rem;
+          color: $brown;
+        }
+        input::placeholder {
+          color: $lightBrown;
+          font-size: 2rem;
+        }
+        input:focus {
+          outline: none;
+        }
+      }
+
+      .links {
+        display: flex;
+        gap: 0.2rem;
+        .navLink {
+          text-decoration: none;
+        }
+        i {
+          font-size: 1.6rem;
+          padding: 0.5rem 0.5rem;
+          color: $brown;
+          transition: all 0.3s ease;
+        }
+        i:hover {
+          color: $lightBrown;
+          border-radius: 50%;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .right {
+      display: flex;
+      gap: 1.5rem;
+      width: 55%;
+      .one {
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+        h3 {
+          font-weight: 500;
+          color: $brown;
+        }
+        p {
+          font-weight: 400;
+          color: $brown;
+        }
+        p:hover {
+          text-decoration: underline;
+          color: $lightBrown;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  hr {
+    border: none;
+    height: 0.1px;
+    background-color: $brown;
+    opacity: 0.5;
+  }
+  .bottom {
+    padding: 1rem 0;
+    p {
+      text-align: center;
+      color: $brown;
+      font-size: 0.8rem;
+    }
+  }
+}
+
+@media (max-width: 920px) {
+}
+
+@media (max-width: 720px) {
+  .footer {
+    .svg {
+      height: 100px;
+    }
+    
+    .main {
+      padding: 1.5rem 1rem;
+      padding-top: 0;
+      .left {
+        width: 100%;
+        .email {
+          width: 100%;
+          input {
+            font-size: 1.5rem;
+          }
+          input::placeholder {
+            font-size: 1.5rem;
+          }
+        }
+      }
+      .right {
+        display: none;
+      }
+    }
+
+    .bottom {
+      p {
+        text-align: left;
+        font-size: 0.6rem;
+        padding: 0 1rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,133 @@
+.footer {
+  background-color: #fffaf0;
+  width: 100%;
+}
+.footer .svg {
+  height: 300px;
+}
+.footer .main {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 2rem 3rem;
+  padding-top: 0;
+}
+.footer .main .left {
+  width: 45%;
+}
+.footer .main .left p {
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #59432d;
+}
+.footer .main .left .email {
+  border-bottom: 1px solid #59432d;
+  width: 75%;
+  margin: 1rem 0;
+  padding: 0.5rem 0;
+}
+.footer .main .left .email input {
+  border: none;
+  background-color: #fffaf0;
+  font-size: 2rem;
+  color: #59432d;
+}
+.footer .main .left .email input::-moz-placeholder {
+  color: #8c663f;
+  font-size: 2rem;
+}
+.footer .main .left .email input::placeholder {
+  color: #8c663f;
+  font-size: 2rem;
+}
+.footer .main .left .email input:focus {
+  outline: none;
+}
+.footer .main .left .links {
+  display: flex;
+  gap: 0.2rem;
+}
+.footer .main .left .links .navLink {
+  text-decoration: none;
+}
+.footer .main .left .links i {
+  font-size: 1.6rem;
+  padding: 0.5rem 0.5rem;
+  color: #59432d;
+  transition: all 0.3s ease;
+}
+.footer .main .left .links i:hover {
+  color: #8c663f;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.footer .main .right {
+  display: flex;
+  gap: 1.5rem;
+  width: 55%;
+}
+.footer .main .right .one {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.footer .main .right .one h3 {
+  font-weight: 500;
+  color: #59432d;
+}
+.footer .main .right .one p {
+  font-weight: 400;
+  color: #59432d;
+}
+.footer .main .right .one p:hover {
+  text-decoration: underline;
+  color: #8c663f;
+  cursor: pointer;
+}
+.footer hr {
+  border: none;
+  height: 0.1px;
+  background-color: #59432d;
+  opacity: 0.5;
+}
+.footer .bottom {
+  padding: 1rem 0;
+}
+.footer .bottom p {
+  text-align: center;
+  color: #59432d;
+  font-size: 0.8rem;
+}
+
+@media (max-width: 720px) {
+  .footer .svg {
+    height: 100px;
+  }
+  .footer .main {
+    padding: 1.5rem 1rem;
+    padding-top: 0;
+  }
+  .footer .main .left {
+    width: 100%;
+  }
+  .footer .main .left .email {
+    width: 100%;
+  }
+  .footer .main .left .email input {
+    font-size: 1.5rem;
+  }
+  .footer .main .left .email input::-moz-placeholder {
+    font-size: 1.5rem;
+  }
+  .footer .main .left .email input::placeholder {
+    font-size: 1.5rem;
+  }
+  .footer .main .right {
+    display: none;
+  }
+  .footer .bottom p {
+    text-align: left;
+    font-size: 0.6rem;
+    padding: 0 1rem;
+  }
+}/*# sourceMappingURL=Footer.css.map */

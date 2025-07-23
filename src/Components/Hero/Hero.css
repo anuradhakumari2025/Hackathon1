@@ -1,0 +1,101 @@
+.hero {
+  height: 100%;
+  width: 100%;
+}
+.hero .main {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 100%;
+  height: 100%;
+  padding-top: 4.2rem;
+}
+.hero .main .left {
+  width: 50%;
+  height: 100%;
+}
+.hero .main .left img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.hero .main .tagline {
+  width: 50%;
+  background-color: #faebcd;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 3rem;
+}
+.hero .main .tagline h1 {
+  color: #59432d;
+  font-size: 3.8rem;
+  line-height: 4rem;
+  text-align: center;
+}
+.hero .main .tagline h1 span {
+  color: #ff8100;
+}
+.hero .main .tagline p {
+  font-size: 1.5rem;
+  color: #8c663f;
+  font-weight: 400;
+  padding: 1.8rem 0;
+}
+.hero .main .tagline div {
+  background-color: #ff8100;
+  padding: 1rem 1.6rem;
+  border-radius: 30px;
+  margin: 1.2rem 0;
+  border: 1px solid #ff8100;
+}
+.hero .main .tagline div p {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #fffaf0;
+  padding: 0;
+  cursor: pointer;
+}
+.hero .main .tagline div:hover {
+  background-color: #fffaf0;
+}
+.hero .main .tagline div:hover p {
+  color: #ff8100;
+}
+
+@media (max-width: 767px) {
+  .hero .main {
+    flex-direction: column;
+    padding-top: 4.2rem;
+  }
+  .hero .main .left {
+    width: 100%;
+  }
+  .hero .main .tagline {
+    width: 100%;
+    padding: 0 1rem;
+  }
+  .hero .main .tagline h1 {
+    font-size: 2.4rem;
+    line-height: 2.6rem;
+    padding-top: 1rem;
+  }
+}
+/* Tablets (iPads etc.) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .hero {
+    height: 35rem;
+  }
+  .hero .main .left {
+    width: 100%;
+  }
+  .hero .main .tagline {
+    width: 100%;
+    padding: 3rem 0;
+  }
+  .hero .main .tagline p {
+    padding: 1.8rem 1rem;
+  }
+}/*# sourceMappingURL=Hero.css.map */

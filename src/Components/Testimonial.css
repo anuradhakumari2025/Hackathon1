@@ -1,0 +1,53 @@
+.swiper {
+  width: 100%;
+  padding: 4rem 0;
+  background-image: url(".././assets/bg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-position: 50% 100%;
+  background-size: cover;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  background-color: #ded9d0;
+  background-color: #f9f5ed;
+  box-shadow: 6px 6px 10px 6px #ded9d0;
+  border-radius: 20px;
+}
+.swiper-slide .slider {
+  height: 100%;
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: #59432d;
+  border-radius: 20px;
+}
+.slider h2 {
+  text-align: left;
+  font-weight: 600;
+  padding: 0.5rem 0;
+  font-size: 1.8rem;
+}
+.slider p {
+  font-weight: 400;
+  text-align: left;
+  line-height: 1rem;
+  font-size: 0.8rem;
+}
+.swiper-slide img {
+  object-fit: cover;
+  width: 100%;
+  aspect-ratio: 2/2;
+  border-radius: 12px;
+}
+
+@media (max-width: 720px) {
+  .swiper{
+    padding: 2.5rem 0;
+  }
+}
