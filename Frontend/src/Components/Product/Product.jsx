@@ -28,6 +28,7 @@ const Product = () => {
           </div>
         ))}
       </div>
+      <div className="viewMore">View More</div>
     </div>
   );
 };

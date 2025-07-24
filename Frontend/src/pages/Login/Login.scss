@@ -2,10 +2,10 @@ $white: #fffaf0;
 $orange: #ff8100;
 $brown: #59432d;
 $lightBrown: #8c663f;
-$purple: #6a1b9a;
 $cream: #faebcd;
 $darkCream: #f3e6d2;
 $grey: #ccbba3;
+
 .login-container {
   display: flex;
   justify-content: center;
@@ -83,7 +83,7 @@ $grey: #ccbba3;
 
   .divider {
     text-align: center;
-    margin: 1rem 0;
+    margin: 0.5rem 0;
     color: $grey;
   }
 

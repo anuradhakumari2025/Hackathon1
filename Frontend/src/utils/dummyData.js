@@ -1,6 +1,8 @@
-import recipe1 from "../assets/recipe1.png"
-import recipe2 from "../assets/recipe2.png"
-imo
+import recipe1 from "../assets/recipe1.png";
+import recipe2 from "../assets/recipe2.png";
+import recipe3 from "../assets/recipe3.png";
+import recipe4 from "../assets/recipe4.png";
+
 const products = [
   {
     image: recipe1,
@@ -13,7 +15,7 @@ const products = [
   },
 
   {
-    image: "../../assets/recipe4.png",
+    image: recipe4,
     title: "Green Detox Smoothie",
     description:
       "A refreshing smoothie blend to detox your body and boost energy with kale, spinach, and moringa.",
@@ -23,7 +25,7 @@ const products = [
   },
 
   {
-    image: "../assets/recipe1.png",
+    image: recipe2,
     title: "Vegan Protein Bars",
     description:
       "Tasty and guilt-free protein bars made with almond butter, oats, and plant protein.",
@@ -32,7 +34,7 @@ const products = [
     offer: "45% OFF",
   },
   {
-    image: "../../assets/recipe1.png",
+    image: recipe3,
     title: "FitTuber Herbal Tea",
     description:
       "A calming herbal tea blend that helps with digestion and improves sleep quality.",
@@ -41,7 +43,7 @@ const products = [
     offer: "45% OFF",
   },
   {
-    image: "../../assets/recipe1.png",
+    image: recipe4,
     title: "Omega-3 Capsules",
     description:
       "High-quality omega-3 capsules to support heart, brain, and joint health.",
@@ -50,7 +52,7 @@ const products = [
     offer: "43% OFF",
   },
   {
-    image: "../../assets/recipe1.png",
+    image: recipe1,
     title: "Superfood Trail Mix",
     description:
       "Healthy mix of dried berries, seeds, and dark chocolate chips — perfect for snacking.",
@@ -59,7 +61,7 @@ const products = [
     offer: "45% OFF",
   },
   {
-    image: "../../assets/recipe1.png",
+    image: recipe3,
     title: "Fit Meal Prep Bowl",
     description:
       "Ready-to-eat balanced meal with brown rice, chickpeas, and veggies in a tangy dressing.",
@@ -68,7 +70,7 @@ const products = [
     offer: "46% OFF",
   },
   {
-    image: "../../assets/recipe1.png",
+    image: recipe4,
     title: "Immunity Booster Juice",
     description:
       "Cold-pressed juice made with turmeric, ginger, orange, and lemon to boost immunity.",

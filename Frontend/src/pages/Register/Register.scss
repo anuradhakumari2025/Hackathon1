@@ -6,6 +6,7 @@ $purple: #6a1b9a;
 $cream: #faebcd;
 $darkCream: #f3e6d2;
 $grey: #ccbba3;
+
 .register-container {
   display: flex;
   justify-content: center;
@@ -32,6 +33,7 @@ $grey: #ccbba3;
   h2 {
     text-align: center;
     margin-bottom: 1.5rem;
+        font-size: 1.8rem;
   }
 
   .input-group {
@@ -39,8 +41,9 @@ $grey: #ccbba3;
 
     label {
       display: block;
-      margin-bottom: 0.3rem;
+      margin-bottom: 0.5rem;
       font-weight: 600;
+            font-size: 1.2rem;
     }
 
     input {
@@ -50,9 +53,13 @@ $grey: #ccbba3;
       border: 1px solid #ccc;
       outline: none;
       color: $brown;
+            font-size: 1rem;
 
       &:focus {
         border-color: $brown;
+      }
+       &::placeholder {
+        color: $lightBrown;
       }
     }
   }
@@ -65,7 +72,7 @@ $grey: #ccbba3;
     border: none;
     border-radius: 6px;
     font-weight: bold;
-    margin-top: 0.5rem;
+    margin-top: 2rem;
     cursor: pointer;
 
     &:hover {
@@ -75,7 +82,7 @@ $grey: #ccbba3;
 
   .divider {
     text-align: center;
-    margin: 1rem 0;
+    margin: 0.5rem 0;
     color: $grey;
   }
 

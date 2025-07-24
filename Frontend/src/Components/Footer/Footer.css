@@ -3,7 +3,8 @@
   width: 100%;
 }
 .footer .svg {
-  height: 300px;
+  height: 500px;
+  cursor: default;
 }
 .footer .main {
   display: flex;
@@ -19,18 +20,31 @@
   text-transform: uppercase;
   font-weight: 500;
   color: #59432d;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 .footer .main .left .email {
   border-bottom: 1px solid #59432d;
   width: 75%;
   margin: 1rem 0;
   padding: 0.5rem 0;
+  display: flex;
+}
+.footer .main .left .email span {
+  margin-left: auto;
+  align-self: flex-end;
+}
+.footer .main .left .email span i {
+  font-size: 2rem;
+  color: #8c663f;
 }
 .footer .main .left .email input {
   border: none;
   background-color: #fffaf0;
   font-size: 2rem;
   color: #59432d;
+  width: 80%;
 }
 .footer .main .left .email input::-moz-placeholder {
   color: #8c663f;
@@ -65,6 +79,17 @@
   display: flex;
   gap: 1.5rem;
   width: 55%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.footer .main .right .mobileUp {
+  display: flex;
+  gap: 1.5rem;
+}
+.footer .main .right .mobileDown {
+  display: flex;
+  gap: 1.5rem;
 }
 .footer .main .right .one {
   display: flex;
@@ -92,6 +117,9 @@
 }
 .footer .bottom {
   padding: 1rem 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 .footer .bottom p {
   text-align: center;
@@ -99,13 +127,32 @@
   font-size: 0.8rem;
 }
 
-@media (max-width: 720px) {
+@media (min-width: 768px) and (max-width: 1024px) {
   .footer .svg {
-    height: 100px;
+    height: 400px;
+  }
+  .footer .svg text {
+    font-size: 100px;
+  }
+  .footer .main .left .email {
+    width: 85%;
+  }
+  .footer .main .left .email input {
+    width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  .footer .svg {
+    height: 200px;
+  }
+  .footer .svg text {
+    font-size: 100px;
   }
   .footer .main {
     padding: 1.5rem 1rem;
     padding-top: 0;
+    flex-direction: column-reverse;
+    gap: 3rem;
   }
   .footer .main .left {
     width: 100%;
@@ -123,7 +170,15 @@
     font-size: 1.5rem;
   }
   .footer .main .right {
-    display: none;
+    width: 100%;
+    flex-direction: column;
+    gap: 3rem;
+  }
+  .footer .main .right .mobileDown {
+    justify-content: space-between;
+  }
+  .footer .main .right .mobileUp {
+    justify-content: space-between;
   }
   .footer .bottom p {
     text-align: left;

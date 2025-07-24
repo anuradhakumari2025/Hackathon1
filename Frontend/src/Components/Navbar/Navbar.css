@@ -9,6 +9,7 @@ nav {
   position: fixed;
   top: 0;
   transition: transform 0.3s ease-in-out;
+  z-index: 20;
 }
 nav .navLeft {
   display: flex;

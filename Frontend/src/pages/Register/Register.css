@@ -25,14 +25,16 @@
 .register-form h2 {
   text-align: center;
   margin-bottom: 1.5rem;
+  font-size: 1.8rem;
 }
 .register-form .input-group {
   margin-bottom: 1rem;
 }
 .register-form .input-group label {
   display: block;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.5rem;
   font-weight: 600;
+  font-size: 1.2rem;
 }
 .register-form .input-group input {
   width: 100%;
@@ -41,9 +43,16 @@
   border: 1px solid #ccc;
   outline: none;
   color: #59432d;
+  font-size: 1rem;
 }
 .register-form .input-group input:focus {
   border-color: #59432d;
+}
+.register-form .input-group input::-moz-placeholder {
+  color: #8c663f;
+}
+.register-form .input-group input::placeholder {
+  color: #8c663f;
 }
 .register-form .register-btn {
   width: 100%;
@@ -53,7 +62,7 @@
   border: none;
   border-radius: 6px;
   font-weight: bold;
-  margin-top: 0.5rem;
+  margin-top: 2rem;
   cursor: pointer;
 }
 .register-form .register-btn:hover {
@@ -61,7 +70,7 @@
 }
 .register-form .divider {
   text-align: center;
-  margin: 1rem 0;
+  margin: 0.5rem 0;
   color: #ccbba3;
 }
 .register-form .social-register {

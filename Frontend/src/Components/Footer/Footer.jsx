@@ -13,11 +13,7 @@ const Footer = () => {
         <defs>
           <path id="fitTuberCurve" d="M 50 150 Q 300 0 550 150" />
         </defs>
-        <text
-          fontSize="50"
-          fontWeight="500"
-          fill="#42210b"
-        >
+        <text fontSize="70" fontWeight="600" fill="#42210b">
           <textPath href="#fitTuberCurve" startOffset="50%" textAnchor="middle">
             FIT TUBER
           </textPath>
@@ -30,7 +26,7 @@ const Footer = () => {
 
           <div className="email">
             <input placeholder="Your email address" />
-            <span>--</span>
+            <span><i className="ri-arrow-right-line"></i></span>
           </div>
 
           <div className="links">
@@ -38,49 +34,51 @@ const Footer = () => {
               <i className="ri-instagram-line"></i>
             </Link>
             <Link to={"https://x.com/FitTuber"} className="navLink">
-            <i className="ri-twitter-x-fill"></i>
+              <i className="ri-twitter-x-fill"></i>
             </Link>
-             <Link to={"https://www.facebook.com/fittuber"} className="navLink">
-            <i className="ri-facebook-circle-fill"></i>
+            <Link to={"https://www.facebook.com/fittuber"} className="navLink">
+              <i className="ri-facebook-circle-fill"></i>
             </Link>
             <Link to={"https://youtube.com/fittuber"} className="navLink">
-            <i className="ri-youtube-fill"></i>
+              <i className="ri-youtube-fill"></i>
             </Link>
           </div>
-          
         </div>
 
         <div className="right">
-          <div className="one">
-            <h3>Shop</h3>
-            <p>Coffees & Creamers</p>
-            <p>Proteins</p>
-            <p>Supplement</p>
-            <p>Shop All</p>
+          <div className="mobileUp">
+            <div className="one">
+              <h3>Shop</h3>
+              <p>Coffees & Creamers</p>
+              <p>Proteins</p>
+              <p>Supplement</p>
+              <p>Shop All</p>
+            </div>
+            <div className="one">
+              <h3>Shop</h3>
+              <p>Coffees Creamers</p>
+              <p>Proteins</p>
+              <p>Supplement</p>
+              <p>Shop All</p>
+            </div>
           </div>
 
-          <div className="one">
-            <h3>Shop</h3>
-            <p>Coffees Creamers</p>
-            <p>Proteins</p>
-            <p>Supplement</p>
-            <p>Shop All</p>
-          </div>
+          <div className="mobileDown">
+            <div className="one">
+              <h3>Shop</h3>
+              <p>Coffees & Creamers</p>
+              <p>Proteins</p>
+              <p>Supplement</p>
+              <p>Shop All</p>
+            </div>
 
-          <div className="one">
-            <h3>Shop</h3>
-            <p>Coffees & Creamers</p>
-            <p>Proteins</p>
-            <p>Supplement</p>
-            <p>Shop All</p>
-          </div>
-
-          <div className="one">
-            <h3>Shop</h3>
-            <p>Coffees & Creamers</p>
-            <p>Proteins</p>
-            <p>Supplement</p>
-            <p>Shop All</p>
+            <div className="one">
+              <h3>Shop</h3>
+              <p>Coffees & Creamers</p>
+              <p>Proteins</p>
+              <p>Supplement</p>
+              <p>Shop All</p>
+            </div>
           </div>
         </div>
       </div>

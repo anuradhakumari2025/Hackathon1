@@ -7,7 +7,8 @@ $lightBrown: #8c663f;
   background-color: $white;
   width: 100%;
   .svg {
-    height: 300px;
+    height: 500px;
+    cursor: default;
   }
   .main {
     display: flex;
@@ -21,6 +22,7 @@ $lightBrown: #8c663f;
         text-transform: uppercase;
         font-weight: 500;
         color: $brown;
+        user-select: none;
       }
 
       .email {
@@ -28,11 +30,21 @@ $lightBrown: #8c663f;
         width: 75%;
         margin: 1rem 0;
         padding: 0.5rem 0;
+        display: flex;
+        span {
+          margin-left: auto;
+          align-self: flex-end;
+          i {
+            font-size: 2rem;
+            color: $lightBrown;
+          }
+        }
         input {
           border: none;
           background-color: $white;
           font-size: 2rem;
           color: $brown;
+          width: 80%;
         }
         input::placeholder {
           color: $lightBrown;
@@ -67,6 +79,15 @@ $lightBrown: #8c663f;
       display: flex;
       gap: 1.5rem;
       width: 55%;
+      user-select: none;
+      .mobileUp {
+        display: flex;
+        gap: 1.5rem;
+      }
+      .mobileDown {
+        display: flex;
+        gap: 1.5rem;
+      }
       .one {
         display: flex;
         flex-direction: column;
@@ -95,6 +116,7 @@ $lightBrown: #8c663f;
   }
   .bottom {
     padding: 1rem 0;
+    user-select: none;
     p {
       text-align: center;
       color: $brown;
@@ -103,18 +125,41 @@ $lightBrown: #8c663f;
   }
 }
 
-@media (max-width: 920px) {
-}
-
-@media (max-width: 720px) {
+@media (min-width: 768px) and (max-width: 1024px) {
   .footer {
     .svg {
-      height: 100px;
+      height: 400px;
+      text {
+        font-size: 100px;
+      }
     }
-    
+    .main {
+      .left {
+        .email {
+          width: 85%;
+          input {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .footer {
+    .svg {
+      height: 200px;
+      text {
+        font-size: 100px;
+      }
+    }
+
     .main {
       padding: 1.5rem 1rem;
       padding-top: 0;
+      flex-direction: column-reverse;
+      gap: 3rem;
       .left {
         width: 100%;
         .email {
@@ -128,7 +173,16 @@ $lightBrown: #8c663f;
         }
       }
       .right {
-        display: none;
+        // display: none;
+        width: 100%;
+        flex-direction: column;
+        gap: 3rem;
+        .mobileDown {
+          justify-content: space-between;
+        }
+        .mobileUp {
+          justify-content: space-between;
+        }
       }
     }
 

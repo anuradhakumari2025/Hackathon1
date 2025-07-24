@@ -45,13 +45,13 @@ const Navbar = () => {
           <defs>
             <path id="fitTuberCurve" d="M 50 150 Q 300 0 550 150" />
           </defs>
-          <text fontSize="50" fontWeight="500" fill="#42210b">
+          <text fontSize="50" fontWeight="600" fill="#42210b">
             <textPath
               href="#fitTuberCurve"
               startOffset="50%"
               textAnchor="middle"
             >
-             <Link to="/">FIT TUBER</Link> 
+              <Link to="/">FIT TUBER</Link>
             </textPath>
           </text>
         </svg>
