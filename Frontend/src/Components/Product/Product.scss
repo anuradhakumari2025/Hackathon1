@@ -6,6 +6,7 @@ $purple: #6a1b9a;
 $cream: #faebcd;
 $darkCream: #f3e6d2;
 $grey: #ccbba3;
+
 .product {
   width: 100%;
   background-color: $white;
@@ -18,7 +19,6 @@ $grey: #ccbba3;
     font-size: 3.4rem;
   }
   .viewMore {
-    color: $white;
     padding: 1rem 4rem;
     text-transform: uppercase;
     font-weight: 600;
@@ -32,9 +32,13 @@ $grey: #ccbba3;
     border: 1px solid $brown;
     cursor: pointer;
   }
+  .productLink {
+    text-decoration: none;
+    color: $white;
+  }
   .viewMore:hover {
-    color: $brown;
     background-color: $white;
+    color: $brown;
   }
 }
 .productCards {
@@ -61,12 +65,14 @@ $grey: #ccbba3;
         object-fit: cover;
       }
     }
+
     h2 {
       font-size: 1.8rem;
       color: $brown;
       font-weight: 600;
       padding: 1rem;
     }
+
     p {
       font-size: 1rem;
       color: $lightBrown;
@@ -74,6 +80,7 @@ $grey: #ccbba3;
       line-height: 1.5rem;
       padding: 0 1rem;
     }
+    
     .price {
       display: flex;
       justify-content: space-between;
@@ -134,7 +141,7 @@ $grey: #ccbba3;
   .productCards {
     grid-template-columns: repeat(2, 1fr);
   }
-   .product {
+  .product {
     h1 {
       padding-top: 2rem;
     }

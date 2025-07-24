@@ -26,7 +26,9 @@ const Footer = () => {
 
           <div className="email">
             <input placeholder="Your email address" />
-            <span><i className="ri-arrow-right-line"></i></span>
+            <span>
+              <i className="ri-arrow-right-line"></i>
+            </span>
           </div>
 
           <div className="links">
@@ -48,36 +50,36 @@ const Footer = () => {
         <div className="right">
           <div className="mobileUp">
             <div className="one">
-              <h3>Shop</h3>
-              <p>Coffees & Creamers</p>
-              <p>Proteins</p>
-              <p>Supplement</p>
+              <h3>EXPLORE</h3>
+              <p>Home</p>
+              <p>Products</p>
+              <p>Videos</p>
               <p>Shop All</p>
             </div>
             <div className="one">
-              <h3>Shop</h3>
-              <p>Coffees Creamers</p>
-              <p>Proteins</p>
-              <p>Supplement</p>
-              <p>Shop All</p>
+              <h3>LEARN</h3>
+              <p>Fitness Tips</p>
+              <p>Nutrition Guides</p>
+              <p>Healthy Recipes</p>
+              <p>Blog</p>
             </div>
           </div>
 
           <div className="mobileDown">
             <div className="one">
-              <h3>Shop</h3>
-              <p>Coffees & Creamers</p>
-              <p>Proteins</p>
-              <p>Supplement</p>
-              <p>Shop All</p>
+              <h3>SUPPORT</h3>
+              <p>Contact Us</p>
+              <p>FAQs</p>
+              <p>Shipping & Returns</p>
+              <p>My Account</p>
             </div>
 
             <div className="one">
-              <h3>Shop</h3>
-              <p>Coffees & Creamers</p>
-              <p>Proteins</p>
-              <p>Supplement</p>
-              <p>Shop All</p>
+              <h3>CONNECT</h3>
+              <p>Affiliate Program</p>
+              <p>Refer a Friend</p>
+              <p>Follow on YouTube</p>
+              <p>Instagram</p>
             </div>
           </div>
         </div>

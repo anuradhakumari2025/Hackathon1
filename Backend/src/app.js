@@ -7,7 +7,7 @@ app.use(express.json())
 
 app.use(
   cors({
-    origin: "http://localhost:5173", // your frontend
+    origin: "https://hackathon-3rvw.onrender.com", // your frontend
     credentials: true,
   })
 );

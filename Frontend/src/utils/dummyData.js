@@ -5,6 +5,7 @@ import recipe4 from "../assets/recipe4.png";
 
 const products = [
   {
+    id: 1,
     image: recipe1,
     title: "Protein Pancake Mix",
     description:
@@ -15,6 +16,7 @@ const products = [
   },
 
   {
+    id: 2,
     image: recipe4,
     title: "Green Detox Smoothie",
     description:
@@ -25,6 +27,7 @@ const products = [
   },
 
   {
+    id: 3,
     image: recipe2,
     title: "Vegan Protein Bars",
     description:
@@ -34,6 +37,7 @@ const products = [
     offer: "45% OFF",
   },
   {
+    id: 4,
     image: recipe3,
     title: "FitTuber Herbal Tea",
     description:
@@ -43,6 +47,7 @@ const products = [
     offer: "45% OFF",
   },
   {
+    id: 5,
     image: recipe4,
     title: "Omega-3 Capsules",
     description:
@@ -52,6 +57,7 @@ const products = [
     offer: "43% OFF",
   },
   {
+    id: 6,
     image: recipe1,
     title: "Superfood Trail Mix",
     description:
@@ -61,6 +67,7 @@ const products = [
     offer: "45% OFF",
   },
   {
+    id: 7,
     image: recipe3,
     title: "Fit Meal Prep Bowl",
     description:
@@ -70,6 +77,7 @@ const products = [
     offer: "46% OFF",
   },
   {
+    id: 8,
     image: recipe4,
     title: "Immunity Booster Juice",
     description:

@@ -29,6 +29,10 @@ nav {
   top: 0;
   transition: transform 0.3s ease-in-out;
   z-index: 20;
+  .navLink {
+    text-decoration: none;
+    color: $brown;
+  }
   .navLeft {
     display: flex;
     align-items: center;
@@ -69,10 +73,6 @@ nav {
       cursor: pointer;
     }
     div {
-      .navLink {
-        text-decoration: none;
-        color: $brown;
-      }
       h3 {
         @include h3;
       }

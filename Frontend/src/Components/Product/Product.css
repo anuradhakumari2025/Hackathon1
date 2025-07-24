@@ -10,7 +10,6 @@
   font-size: 3.4rem;
 }
 .product .viewMore {
-  color: #fffaf0;
   padding: 1rem 4rem;
   text-transform: uppercase;
   font-weight: 600;
@@ -25,9 +24,13 @@
   border: 1px solid #59432d;
   cursor: pointer;
 }
+.product .productLink {
+  text-decoration: none;
+  color: #fffaf0;
+}
 .product .viewMore:hover {
-  color: #59432d;
   background-color: #fffaf0;
+  color: #59432d;
 }
 
 .productCards {

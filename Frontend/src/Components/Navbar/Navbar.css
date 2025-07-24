@@ -11,6 +11,10 @@ nav {
   transition: transform 0.3s ease-in-out;
   z-index: 20;
 }
+nav .navLink {
+  text-decoration: none;
+  color: #59432d;
+}
 nav .navLeft {
   display: flex;
   align-items: center;
@@ -48,10 +52,6 @@ nav .navRight i {
   font-size: 1.3rem;
   color: #59432d;
   cursor: pointer;
-}
-nav .navRight div .navLink {
-  text-decoration: none;
-  color: #59432d;
 }
 nav .navRight div h3 {
   font-size: 1.3rem;

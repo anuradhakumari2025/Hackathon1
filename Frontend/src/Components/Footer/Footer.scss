@@ -76,17 +76,17 @@ $lightBrown: #8c663f;
     }
 
     .right {
-      display: flex;
-      gap: 1.5rem;
       width: 55%;
       user-select: none;
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
       .mobileUp {
-        display: flex;
-        gap: 1.5rem;
+          display: grid;
+      grid-template-columns: repeat(2,1fr);
       }
       .mobileDown {
-        display: flex;
-        gap: 1.5rem;
+          display: grid;
+      grid-template-columns: repeat(2,1fr);
       }
       .one {
         display: flex;
@@ -173,16 +173,9 @@ $lightBrown: #8c663f;
         }
       }
       .right {
-        // display: none;
         width: 100%;
-        flex-direction: column;
-        gap: 3rem;
-        .mobileDown {
-          justify-content: space-between;
-        }
-        .mobileUp {
-          justify-content: space-between;
-        }
+          grid-template-columns: repeat(1,1fr);
+          gap: 3.5rem;
       }
     }
 

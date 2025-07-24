@@ -4,6 +4,7 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
   padding: 0 3rem;
+  padding-top: 4.8rem;
   background-color: #faebcd;
   background-image: url("../../assets/bg.png");
   background-position: 50% 100%;
@@ -29,6 +30,13 @@
   font-weight: 500;
   color: #59432d;
   font-family: monospace;
+}
+.productDetail .detail .mrp {
+  color: #ccbba3;
+  text-decoration: line-through;
+}
+.productDetail .detail .discount {
+  color: #ff8100;
 }
 .productDetail .detail h3 {
   font-weight: 500;

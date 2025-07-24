@@ -24,7 +24,9 @@ const Navbar = () => {
     <nav className={`${showNavbar ? "show" : "hide"}`}>
       <div className="navLeft">
         <div>
-          <h3>Shop</h3>
+          <Link to="/products" className="navLink">
+            <h3>Shop</h3>
+          </Link>
         </div>
         <div>
           <h3>About</h3>

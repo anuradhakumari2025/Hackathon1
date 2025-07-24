@@ -1,14 +1,23 @@
-import "./Product.css";
-import { Link, useNavigate } from "react-router-dom";
 import products from "../../utils/dummyData";
+import "../../Components/Product/Product.scss";
+import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
-const Product = () => {
+const Products = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  const navigate = useNavigate();
+  const handleClick = (id) => {
+    navigate(`/products/${id}`);
+  };
   return (
     <div className="product">
       <h1>Recipes Book</h1>
+
       <div className="productCards">
-        {products.slice(0,3).map((product, idx) => (
-          <div className="productCard" key={idx}>
+        {products.map((product, idx) => (
+          <div className="productCard" key={idx} onClick={() => handleClick(product.id)}>
             <div className="productImg">
               <img src={product.image} alt="" />
             </div>
@@ -28,9 +37,8 @@ const Product = () => {
           </div>
         ))}
       </div>
-      <Link to="/products" className="productLink"><div className="viewMore"> View More</div></Link>
     </div>
   );
 };
 
-export default Product;
+export default Products;
