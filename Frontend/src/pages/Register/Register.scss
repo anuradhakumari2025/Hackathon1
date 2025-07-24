@@ -1,0 +1,139 @@
+$white: #fffaf0;
+$orange: #ff8100;
+$brown: #59432d;
+$lightBrown: #8c663f;
+$purple: #6a1b9a;
+$cream: #faebcd;
+$darkCream: #f3e6d2;
+$grey: #ccbba3;
+.register-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f5f5f5;
+  background-image: url("./../../assets/bg.png");
+  background-position: 50% 100%;
+  padding: 4rem 0rem;
+  padding-top: 4.4rem;
+}
+.register {
+  width: 40%;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  margin-top: 3rem;
+}
+
+.register-form {
+  background: #fff;
+  padding: 2rem 2.5rem;
+  width: 100%;
+  color: $brown;
+
+  h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .input-group {
+    margin-bottom: 1rem;
+
+    label {
+      display: block;
+      margin-bottom: 0.3rem;
+      font-weight: 600;
+    }
+
+    input {
+      width: 100%;
+      padding: 0.6rem;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      outline: none;
+      color: $brown;
+
+      &:focus {
+        border-color: $brown;
+      }
+    }
+  }
+
+  .register-btn {
+    width: 100%;
+    padding: 0.8rem;
+    background: $brown;
+    color: $white;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    margin-top: 0.5rem;
+    cursor: pointer;
+
+    &:hover {
+      background: $lightBrown;
+    }
+  }
+
+  .divider {
+    text-align: center;
+    margin: 1rem 0;
+    color: $grey;
+  }
+
+  .social-register {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+
+    button {
+      padding: 0.6rem;
+      border-radius: 6px;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .google-btn {
+      background: #db4437;
+      color: white;
+      padding: 0.8rem;
+    }
+    .google-btn:hover{
+      background-color: #f04637;
+    }
+
+    .github-btn {
+      background: #333;
+      color: white;
+    }
+  }
+
+  .login-link {
+    text-align: center;
+    margin-top: 1rem;
+    color: #666;
+
+    .registerLink {
+      color: $brown;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+        color: $lightBrown;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .register-container{
+    padding: 4rem 1rem;
+  }
+  .register{
+    width: 100%;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .register-container{
+    background-position: 100% 100%;
+  }
+}
