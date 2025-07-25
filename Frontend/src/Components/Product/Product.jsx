@@ -1,14 +1,27 @@
 import "./Product.css";
 import { Link, useNavigate } from "react-router-dom";
 import products from "../../utils/dummyData";
+import RippleButton from "../RippleButton/RippleButton";
+import { useEffect } from "react";
 
 const Product = () => {
+  const navigate = useNavigate();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  const handleClick = (id) => {
+    navigate(`/products/${id}`);
+  };
   return (
     <div className="product">
       <h1>Recipes Book</h1>
       <div className="productCards">
-        {products.slice(0,3).map((product, idx) => (
-          <div className="productCard" key={idx}>
+        {products.slice(0, 3).map((product, idx) => (
+          <div
+            className="productCard"
+            key={idx}
+            onClick={() => handleClick(product.id)}
+          >
             <div className="productImg">
               <img src={product.image} alt="" />
             </div>
@@ -24,11 +37,13 @@ const Product = () => {
                 </span>
               </h4>
             </div>
-            <button className="add">add to cart</button>
+            <RippleButton className="add" label="Add to Cart" />
           </div>
         ))}
       </div>
-      <Link to="/products" className="productLink"><div className="viewMore"> View More</div></Link>
+      <Link to="/products" className="productLink">
+        <div className="viewMore"> View More</div>
+      </Link>
     </div>
   );
 };

@@ -13,7 +13,7 @@ const Footer = () => {
         <defs>
           <path id="fitTuberCurve" d="M 50 150 Q 300 0 550 150" />
         </defs>
-        <text fontSize="70" fontWeight="600" fill="#42210b">
+        <text fontSize="70" fontWeight="600" fill="#59432d">
           <textPath href="#fitTuberCurve" startOffset="50%" textAnchor="middle">
             FIT TUBER
           </textPath>

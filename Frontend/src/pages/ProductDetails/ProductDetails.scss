@@ -43,8 +43,9 @@ $grey: #ccbba3;
       text-decoration: line-through;
     }
 
-     .discount {
-          color: $orange;}
+    .discount {
+      color: $orange;
+    }
 
     h3 {
       font-weight: 500;
@@ -94,7 +95,6 @@ $grey: #ccbba3;
     gap: 0;
     .productImg {
       padding: 2rem 0;
-      // height: 20rem;
       img {
         height: 25rem;
       }

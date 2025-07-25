@@ -1,11 +1,15 @@
 import "./ProductDetails.scss";
 import { useParams } from "react-router-dom";
 import products from "../../utils/dummyData";
+import RippleButton from "../../Components/RippleButton/RippleButton";
+import { useEffect } from "react";
 
 const ProductDetails = () => {
   const { id } = useParams();
   const product = products.find((item) => item.id === Number(id));
-
+useEffect(() => {
+  window.scrollTo(0, 0);
+}, []);
   if (!product) return <h2>Product not found</h2>;
   return (
     <div className="productDetail">
@@ -30,7 +34,7 @@ const ProductDetails = () => {
         <p>
           Price: <span>${product.discountedPrice.toFixed(2)}</span>
         </p>
-        <button>Add to Cart</button>
+        <RippleButton label="Add to Cart"/>
       </div>
     </div>
   );

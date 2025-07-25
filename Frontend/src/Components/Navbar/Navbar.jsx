@@ -29,7 +29,9 @@ const Navbar = () => {
           </Link>
         </div>
         <div>
-          <h3>About</h3>
+          <Link to="/about" className="navLink">
+            <h3>About</h3>
+          </Link>
         </div>
       </div>
 
@@ -47,7 +49,7 @@ const Navbar = () => {
           <defs>
             <path id="fitTuberCurve" d="M 50 150 Q 300 0 550 150" />
           </defs>
-          <text fontSize="50" fontWeight="600" fill="#42210b">
+          <text fontSize="50" fontWeight="600" fill="#59432d">
             <textPath
               href="#fitTuberCurve"
               startOffset="50%"

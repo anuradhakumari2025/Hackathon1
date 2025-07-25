@@ -1,5 +1,6 @@
 import "./Hero.css";
-import vivekImg from "../../assets/vivek2.jpeg";
+import vivekImg from "../../assets/recipe1.png";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -15,7 +16,7 @@ const Hero = () => {
           </h1>
           <p>Simple, natural wellness tips backed by evidence</p>
           <div>
-            <p>Watch Latest Video</p>
+            <Link className="heroLink"><p>Buy Latest Recipe</p></Link>
           </div>
         </div>
       </div>

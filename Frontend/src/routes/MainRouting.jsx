@@ -6,6 +6,7 @@ import Footer from "../Components/Footer/Footer";
 import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
 import Products from "../pages/Products/Products";
+import About from "../pages/About/About";
 
 const MainRouting = () => {
   return (
@@ -13,6 +14,7 @@ const MainRouting = () => {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About/>}/>
         <Route path="/products" element={<Products/>}/>
         <Route path="/products/:id" element={<ProductDetails />} />
         <Route path="/login" element={<Login/>}/>

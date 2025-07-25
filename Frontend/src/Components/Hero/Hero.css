@@ -16,8 +16,6 @@
 .hero .main .left img {
   height: 100%;
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 .hero .main .tagline {
   width: 50%;
@@ -50,6 +48,9 @@
   border-radius: 30px;
   margin: 1.2rem 0;
   border: 1px solid #ff8100;
+}
+.hero .main .tagline div .heroLink {
+  text-decoration: none;
 }
 .hero .main .tagline div p {
   font-size: 1.3rem;

@@ -1,20 +1,16 @@
 import MainRouting from "./routes/MainRouting";
 import "./App.css";
-import { useEffect } from "react";
+import { useState } from "react";
+import SplashScreen from "./Components/SplashScreen/SplashScreen";
 const App = () => {
-  
-  useEffect(() => {
-    const splash = document.getElementById("splash");
-    if (splash) {
-      splash.style.opacity = 0;
-      setTimeout(() => {
-        splash.style.display = "none";
-      }, 2000); 
-    }
-  }, []);
+  const [showSplash, setShowSplash] = useState(true);
   return (
     <>
-      <MainRouting />
+      {showSplash ? (
+        <SplashScreen onFinish={() => setShowSplash(false)} />
+      ) : (
+        <MainRouting />
+      )}
     </>
   );
 };

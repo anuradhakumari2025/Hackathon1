@@ -2,6 +2,7 @@ import products from "../../utils/dummyData";
 import "../../Components/Product/Product.scss";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import RippleButton from "../../Components/RippleButton/RippleButton";
 
 const Products = () => {
   useEffect(() => {
@@ -17,7 +18,11 @@ const Products = () => {
 
       <div className="productCards">
         {products.map((product, idx) => (
-          <div className="productCard" key={idx} onClick={() => handleClick(product.id)}>
+          <div
+            className="productCard"
+            key={idx}
+            onClick={() => handleClick(product.id)}
+          >
             <div className="productImg">
               <img src={product.image} alt="" />
             </div>
@@ -33,7 +38,7 @@ const Products = () => {
                 </span>
               </h4>
             </div>
-            <button className="add">add to cart</button>
+            <RippleButton className="add" label="Add to Cart" />
           </div>
         ))}
       </div>
