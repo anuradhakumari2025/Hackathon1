@@ -18,10 +18,10 @@ const About = () => {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: containerRef.current,
-          start: "top 80%", 
+          start: "top 80%",
           toggleActions: "play none none none",
         },
-        defaults: { duration: 1, ease: "power3.out" },
+        defaults: { duration: 1, ease: "power4.out" },
       });
 
       const section = containerRef.current;
@@ -42,7 +42,7 @@ const About = () => {
         });
     }, containerRef);
 
-    return () => ctx.revert(); // Cleanup on unmount
+    return () => ctx.revert();
   }, []);
   return (
     <div className="aboutPage" ref={containerRef}>

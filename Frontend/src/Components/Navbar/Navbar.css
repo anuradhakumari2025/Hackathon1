@@ -20,15 +20,26 @@ nav .navLeft {
   align-items: center;
   gap: 2rem;
 }
+nav .navLeft div {
+  position: relative;
+}
 nav .navLeft div h3 {
   font-size: 1.3rem;
   transition: all ease 0.3s;
   font-weight: 500;
 }
-nav .navLeft div h3:hover {
-  text-decoration: underline;
-  color: #8c663f;
-  cursor: pointer;
+nav .navLeft div .navLink::before {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #8c663f;
+  transition: all 0.4s ease;
+}
+nav .navLeft div .navLink:hover::before {
+  width: 100%;
 }
 nav .mobileLeft {
   display: none;
@@ -53,13 +64,48 @@ nav .navRight i {
   color: #59432d;
   cursor: pointer;
 }
+nav .navRight i:hover {
+  color: #8c663f;
+}
+nav .navRight div {
+  position: relative;
+}
 nav .navRight div h3 {
   font-size: 1.3rem;
   transition: all ease 0.3s;
   font-weight: 500;
 }
-nav .navRight div h3:hover {
-  text-decoration: underline;
+nav .navRight div .navLink::before {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #8c663f;
+  transition: all 0.4s ease;
+}
+nav .navRight div .navLink:hover::before {
+  width: 100%;
+}
+nav .navRight div .cart {
+  position: fixed;
+  background-color: #fffaf0;
+  width: 40%;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  padding: 2rem 2rem;
+  box-shadow: 6px 6px 6px 6px #ccbba3;
+}
+nav .navRight div .cart .close {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #59432d;
+  padding-bottom: 0.8rem;
+}
+nav .navRight div .cart .close i:hover {
   color: #8c663f;
   cursor: pointer;
 }
@@ -90,6 +136,46 @@ nav .mobileRight {
   }
   nav .mobileLeft i {
     font-size: 1.8rem;
+  }
+  nav .mobileLeft .menu {
+    position: fixed;
+    width: 100%;
+    background-color: #faebcd;
+    height: 100%;
+    top: 100%;
+    background-image: url("../../assets/bg.png");
+    background-position: 0% 100%;
+    left: 0;
+    height: calc(100vh - 4.2rem);
+    padding: 1rem 1rem;
+  }
+  nav .mobileLeft .menu h3 {
+    padding: 0.4rem 0;
+  }
+  nav .mobileLeft .menu .navLink {
+    position: relative;
+  }
+  nav .mobileLeft .menu .navLink::before {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #8c663f;
+    transition: all 0.4s ease;
+    bottom: 4px;
+  }
+  nav .mobileLeft .menu .navLink:hover::before {
+    width: 10%;
+  }
+  nav .mobileLeft .menu .close {
+    display: flex;
+    justify-content: flex-end;
+  }
+  nav .mobileLeft .menu .close i:hover {
+    color: #8c663f;
+    cursor: pointer;
   }
   nav .logo {
     display: flex;

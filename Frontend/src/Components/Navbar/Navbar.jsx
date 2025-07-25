@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import "./Navbar.scss";
 import { Link } from "react-router-dom";
+import AnimatedLink from "../AnimatedLink/AnimatedLink";
 const Navbar = () => {
   const [showNavbar, setShowNavbar] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
@@ -20,6 +21,9 @@ const Navbar = () => {
       window.removeEventListener("scroll", controlNavbar);
     };
   }, [lastScrollY]);
+  const [showMenu, setShowMenu] = useState(false);
+  const [showCart, setShowCart] = useState(false);
+
   return (
     <nav className={`${showNavbar ? "show" : "hide"}`}>
       <div className="navLeft">
@@ -36,13 +40,44 @@ const Navbar = () => {
       </div>
 
       <div className="mobileLeft">
-        <i className="ri-menu-line"></i>
+        <i className="ri-menu-line" onClick={() => setShowMenu(!showMenu)}></i>
+
+        {showMenu && (
+          <div className="menu">
+            <div className="close">
+              <i
+                className="ri-close-large-line"
+                onClick={() => setShowMenu(!showMenu)}
+              ></i>
+            </div>
+            <Link
+              to="/products"
+              className="navLink"
+              onClick={() => setShowMenu(!showMenu)}
+            >
+              <h3>Shop</h3>
+            </Link>
+            <Link
+              to="/about"
+              className="navLink"
+              onClick={() => setShowMenu(!showMenu)}
+            >
+              <h3>About</h3>
+            </Link>
+            <Link
+              to="/login"
+              className="navLink"
+              onClick={() => setShowMenu(!showMenu)}
+            >
+              <h3>Login</h3>
+            </Link>
+          </div>
+        )}
       </div>
 
       <div className="logo">
         <svg
           className="svg"
-          // viewBox="0 0 231 60"
           viewBox="0 0 600 100"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -64,13 +99,27 @@ const Navbar = () => {
       <div className="navRight">
         <i className="ri-search-line"></i>
         <div>
-          {/* <i className="ri-user-line"></i> */}
           <Link to="/login" className="navLink">
             <h3>Login</h3>
           </Link>
         </div>
-        <div>
-          <i className="ri-shopping-cart-line"></i>
+        <div className="">
+          <i
+            className="ri-shopping-cart-line"
+            onClick={() => setShowCart(!showCart)}
+          ></i>
+          {showCart && (
+            <div className="cart">
+              <div className="close">
+                <h2>Shopping Cart (0)</h2>
+                <i
+                  className="ri-close-large-line"
+                  onClick={() => setShowCart(!showCart)}
+                ></i>
+              </div>
+
+            </div>
+          )}
         </div>
       </div>
       <div className="mobileRight">

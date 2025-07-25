@@ -1,5 +1,6 @@
 import products from "../../utils/dummyData";
 import "../../Components/Product/Product.scss";
+import "./Products.scss"
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import RippleButton from "../../Components/RippleButton/RippleButton";
@@ -13,7 +14,7 @@ const Products = () => {
     navigate(`/products/${id}`);
   };
   return (
-    <div className="product">
+    <div className="products">
       <h1>Recipes Book</h1>
 
       <div className="productCards">

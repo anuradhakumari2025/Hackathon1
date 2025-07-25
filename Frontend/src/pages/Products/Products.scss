@@ -1,0 +1,52 @@
+$white: #fffaf0;
+$orange: #ff8100;
+$brown: #59432d;
+$lightBrown: #8c663f;
+$purple: #6a1b9a;
+$cream: #faebcd;
+$darkCream: #f3e6d2;
+$grey: #ccbba3;
+.products {
+  width: 100%;
+  background-color: $white;
+  padding: 1rem 0;
+
+  h1 {
+    padding: 2rem 3rem;
+    padding-top: 5rem;
+    color: $brown;
+    font-size: 3.4rem;
+  }
+  .viewMore {
+    padding: 1rem 4rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1rem;
+    border-radius: 30px;
+    background-color: $brown;
+    width: fit-content;
+    align-self: center;
+    margin: 0rem auto;
+    margin-top: 6rem;
+    border: 1px solid $brown;
+    cursor: pointer;
+  }
+  .productLink {
+    text-decoration: none;
+    color: $white;
+  }
+  .viewMore:hover {
+    background-color: $white;
+    color: $brown;
+  }
+}
+
+@media (max-width: 767px) {
+  .products {
+    h1 {
+      font-size: 2.4rem;
+      padding: 0rem 1rem;
+      padding-top: 4rem;
+    }
+  }}
+

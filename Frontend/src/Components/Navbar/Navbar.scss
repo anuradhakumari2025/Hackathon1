@@ -7,11 +7,17 @@ $cream: #faebcd;
 $darkCream: #f3e6d2;
 $grey: #ccbba3;
 
-@mixin navTextHover {
-  text-decoration: underline;
-  color: $lightBrown;
-  cursor: pointer;
+@mixin navLinkBefore {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: $lightBrown;
+  transition: all 0.4s ease;
 }
+
 @mixin h3 {
   font-size: 1.3rem;
   transition: all ease 0.3s;
@@ -38,11 +44,15 @@ nav {
     align-items: center;
     gap: 2rem;
     div {
+      position: relative;
       h3 {
         @include h3;
       }
-      h3:hover {
-        @include navTextHover;
+      .navLink::before {
+        @include navLinkBefore;
+      }
+      .navLink:hover::before {
+        width: 100%;
       }
     }
   }
@@ -72,12 +82,41 @@ nav {
       color: $brown;
       cursor: pointer;
     }
+    i:hover{
+      color: $lightBrown;
+    }
     div {
+      position: relative;
       h3 {
         @include h3;
       }
-      h3:hover {
-        @include navTextHover;
+      .navLink::before {
+        @include navLinkBefore;
+      }
+      .navLink:hover::before {
+        width: 100%;
+      }
+      .cart{
+        position: fixed;
+        background-color: $white;
+        width: 40%;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        padding: 2rem 2rem;
+            box-shadow: 6px 6px 6px 6px $grey;
+
+         .close {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          border-bottom: 1px solid $brown;
+          padding-bottom: 0.8rem;
+          i:hover {
+            color: $lightBrown;
+            cursor: pointer;
+          }
+        }
       }
     }
   }
@@ -107,6 +146,39 @@ nav {
       i {
         font-size: 1.8rem;
       }
+      .menu {
+        position: fixed;
+        width: 100%;
+        background-color: $cream;
+        height: 100%;
+        top: 100%;
+        background-image: url("../../assets/bg.png");
+        background-position: 0% 100%;
+        left: 0;
+        height: calc(100vh - 4.2rem);
+        padding: 1rem 1rem;
+        h3 {
+          padding: 0.4rem 0;
+        }
+        .navLink {
+          position: relative;
+        }
+        .navLink::before {
+          @include navLinkBefore;
+          bottom: 4px;
+        }
+        .navLink:hover::before {
+          width: 10%;
+        }
+        .close {
+          display: flex;
+          justify-content: flex-end;
+          i:hover {
+            color: $lightBrown;
+            cursor: pointer;
+          }
+        }
+      }
     }
 
     .logo {
@@ -114,7 +186,6 @@ nav {
       align-items: center;
       justify-content: center;
       height: 100%;
-      // border-right: 1px solid grey;
       width: 250px;
       .svg {
         width: 100%;

@@ -20,7 +20,7 @@ $cream: #faebcd;
       img {
         height: 100%;
         width: 100%;
-        // object-fit: cover;
+        object-fit: cover;
       }
     }
     .tagline {
@@ -80,10 +80,13 @@ $cream: #faebcd;
       padding-top: 4.2rem;
       .left {
         width: 100%;
+                  height: 22rem;
+
+      
       }
       .tagline {
         width: 100%;
-        padding: 0 1rem;
+        padding: 1rem 1rem;
         h1 {
           font-size: 2.4rem;
           line-height: 2.6rem;

@@ -10,7 +10,6 @@ $grey: #ccbba3;
   color: black;
   width: 100%;
   background-color: $white;
-  // height: 100%;
   display: grid;
   padding: 0rem 3rem;
   padding-top: 6rem;
@@ -34,9 +33,6 @@ $grey: #ccbba3;
   .about {
     display: flex;
     flex-direction: column;
-    // background-color: red;
-    // justify-content: flex-start;
-    // align-items: flex-start;
     padding: 2rem 0;
     h2 {
       color: $brown;
@@ -76,14 +72,51 @@ $grey: #ccbba3;
   .gridImg {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    // background-color: red;
     gap: 1rem;
     img {
       width: 100%;
       height: 14rem;
-      // object-fit: cover;
       border-radius: 10px;
-      // aspect-ratio: 1/1;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .aboutPage {
+    padding: 0 1rem;
+    padding-top: 5rem;
+
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+    .about {
+      h2 {
+        font-size: 2.4rem;
+        line-height: 2.8rem;
+      }
+      p {
+        padding-top: 4rem;
+        padding-bottom: 0;
+      }
+    }
+    .aboutPlatform {
+      h3 {
+        font-size: 2rem;
+        line-height: 2.2rem;
+      }
+    }
+    .gridImg {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .aboutPage {
+    grid-template-columns: repeat(1, 1fr);
+    .gridImg {
+      img {
+        height: 20rem;
+      }
     }
   }
 }
