@@ -64,6 +64,7 @@
   font-weight: bold;
   margin-top: 2rem;
   cursor: pointer;
+  font-size: 1rem;
 }
 .register-form .register-btn:hover {
   background: #8c663f;
@@ -89,6 +90,7 @@
   background: #db4437;
   color: white;
   padding: 0.8rem;
+  font-size: 1rem;
 }
 .register-form .social-register .google-btn:hover {
   background-color: #f04637;

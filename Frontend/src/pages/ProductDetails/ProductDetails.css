@@ -46,16 +46,11 @@
   padding: 1.5rem 0;
 }
 .productDetail .detail button {
-  border: none;
   background-color: #ff8100;
-  border-radius: 30px;
-  padding: 1rem 3rem;
   color: #fffaf0;
-  font-size: 1rem;
-  font-weight: 600;
   border: 1px solid #ff8100;
   width: 100%;
-  margin: 2rem 0;
+  margin-top: 2rem;
 }
 .productDetail .detail p {
   color: #59432d;
@@ -70,10 +65,10 @@
 .productDetail .detail button:hover {
   background-color: #fffaf0;
   color: #ff8100;
-  cursor: pointer;
 }
-.productDetail .detail button:active {
-  scale: 0.95;
+.productDetail .detail .btns {
+  display: flex;
+  gap: 2rem;
 }
 
 @media (max-width: 767px) {

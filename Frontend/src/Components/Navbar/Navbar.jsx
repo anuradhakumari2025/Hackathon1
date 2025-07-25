@@ -1,16 +1,17 @@
 import { useEffect, useState } from "react";
 import "./Navbar.scss";
 import { Link } from "react-router-dom";
-import AnimatedLink from "../AnimatedLink/AnimatedLink";
+import RippleButton from "../RippleButton/RippleButton";
+
 const Navbar = () => {
   const [showNavbar, setShowNavbar] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
 
   const controlNavbar = () => {
     if (window.scrollY > lastScrollY) {
-      setShowNavbar(false); // scroll down → hide
+      setShowNavbar(false);
     } else {
-      setShowNavbar(true); // scroll up → show
+      setShowNavbar(true);
     }
     setLastScrollY(window.scrollY);
   };
@@ -21,6 +22,7 @@ const Navbar = () => {
       window.removeEventListener("scroll", controlNavbar);
     };
   }, [lastScrollY]);
+
   const [showMenu, setShowMenu] = useState(false);
   const [showCart, setShowCart] = useState(false);
 
@@ -97,7 +99,6 @@ const Navbar = () => {
       </div>
 
       <div className="navRight">
-        <i className="ri-search-line"></i>
         <div>
           <Link to="/login" className="navLink">
             <h3>Login</h3>
@@ -108,22 +109,62 @@ const Navbar = () => {
             className="ri-shopping-cart-line"
             onClick={() => setShowCart(!showCart)}
           ></i>
+
           {showCart && (
             <div className="cart">
-              <div className="close">
-                <h2>Shopping Cart (0)</h2>
-                <i
-                  className="ri-close-large-line"
-                  onClick={() => setShowCart(!showCart)}
-                ></i>
-              </div>
+              <div className="cartContainer">
+                <div className="close">
+                  <h2>Shopping Cart (0)</h2>
+                  <i
+                    className="ri-close-large-line"
+                    onClick={() => setShowCart(!showCart)}
+                  ></i>
+                </div>
 
+                <div className="cartItems">
+                  <div className="item">
+                    <div className="img">
+                      <img
+                        src="https://images.unsplash.com/photo-1627907228175-2bf846a303b4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cmVjaXBlJTIwYm9va3xlbnwwfHwwfHx8MA%3D%3D"
+                        alt=""
+                      />
+                    </div>
+                    <div className="det">
+                      <h3>Superfood Trail Mix</h3>
+                      <p>
+                        Price: <span className="price">$50.00</span>
+                      </p>
+                      <div className="quan">
+                        <i className="ri-subtract-line"></i>
+                        <span>2</span>
+                        <i className="ri-add-fill"></i>
+                      </div>
+                    </div>
+                    <div className="delete">
+                      <i className="ri-close-large-line"></i>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="checkout">
+                  <Link to="/cart" onClick={() => setShowCart(!showCart)}>
+                    <RippleButton label="Checkout Now" />
+                  </Link>
+                </div>
+              </div>
             </div>
           )}
         </div>
       </div>
+      
       <div className="mobileRight">
-        <i className="ri-shopping-cart-line"></i>
+        <Link
+          to="/cart"
+          className="mobCartLink"
+          onClick={() => setShowCart(!showCart)}
+        >
+          <i className="ri-shopping-cart-line"></i>
+        </Link>
       </div>
     </nav>
   );
